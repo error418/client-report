@@ -24,6 +24,7 @@ app.post("/api/1/logger", function(req, res) {
 	log.error(message);
 });
 
+app.use('/scripts', express.static(__dirname + "/node_modules/fingerprintjs2/dist"));
 app.use('/scripts', express.static(__dirname + '/node_modules/stacktrace-js/dist/'));
 app.use('/scripts', express.static(__dirname + '/node_modules/jquery/dist/'));
 

@@ -11,6 +11,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "fingerprintjs2": "^1.4.1",
     "gulp": "^3.9.1",
     "jquery": "^3.1.1",
     "log": "^1.4.0",

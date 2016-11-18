@@ -3,18 +3,27 @@ window.onerror = function(msg, file, line, col, error) {
 		function(stackframes) {
 			var log = {
 				msg: msg,
-				trace: stackframes
-			}
-			
-			$.ajax(
-				{
-					type: "POST",
-					url: "/api/1/logger",
-					data: JSON.stringify(log),
-					dataType: "json",
-					contentType: "application/json"
+				fingerprint: 2,
+				trace: stackframes,
+				platform: {
+					browser: navigator.userAgent,
+					cookiesEnabled: navigator.cookieEnabled
 				}
-			);
+			};
+			
+			new Fingerprint2().get(function(fingerprint, components){
+				log.fingerprint = fingerprint;
+				
+				$.ajax(
+					{
+						type: "POST",
+						url: "/api/1/logger",
+						data: JSON.stringify(log),
+						dataType: "json",
+						contentType: "application/json"
+					}
+				);
+			});
 		}
 	)
 	.catch(
