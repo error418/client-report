@@ -16,20 +16,20 @@ Following JSON will be sent to the server on JavaScript errors:
 
 ```javascript
 {
-   "msg":"Uncaught ReferenceError: a is not defined",
-   "fingerprint":"38602aaafc4c5682ee3ff45079482bcf",
+   "msg": "Uncaught ReferenceError: a is not defined",
+   "fingerprint": "38602aaafc4c5682ee3ff45079482bcf",
    "trace":[
       {
-         "functionName":"HTMLButtonElement.onclick",
-         "fileName":"http://localhost:3000/static/",
-         "lineNumber":11,
-         "columnNumber":25,
-         "source":"    at HTMLButtonElement.onclick (http://localhost:3000/static/:11:25)"
+         "functionName": "HTMLButtonElement.onclick",
+         "fileName": "http://localhost:3000/static/",
+         "lineNumber": 11,
+         "columnNumber": 25,
+         "source": "    at HTMLButtonElement.onclick (http://localhost:3000/static/:11:25)"
       }
    ],
-   "platform":{
-      "browser":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36",
-      "cookiesEnabled":true
+   "platform": {
+      "browser": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36",
+      "cookiesEnabled": true
    }
 }
 ```

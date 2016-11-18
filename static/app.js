@@ -28,7 +28,7 @@ window.onerror = function(msg, file, line, col, error) {
 	)
 	.catch(
 		function(e) {
-			console.log("could not send to logger");
+			console.log("could not send my messages to the logger service :(");
 		}
 	);
 };
