@@ -3,7 +3,6 @@ window.onerror = function(msg, file, line, col, error) {
 		function(stackframes) {
 			var log = {
 				msg: msg,
-				fingerprint: 2,
 				trace: stackframes,
 				platform: {
 					browser: navigator.userAgent,
